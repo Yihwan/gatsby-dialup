@@ -1,0 +1,66 @@
+{
+  "name": "gatsby-starter-yihwan",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "1.0.0",
+  "author": "Yihwan Kim",
+  "dependencies": {
+    "@emotion/core": "^10.1.1",
+    "@emotion/styled": "^10.0.27",
+    "gatsby": "^2.27.0",
+    "gatsby-image": "^2.2.39",
+    "gatsby-plugin-emotion": "^4.2.0",
+    "gatsby-plugin-manifest": "^2.2.39",
+    "gatsby-plugin-offline": "^3.0.32",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-remove-trailing-slashes": "^2.2.0",
+    "gatsby-plugin-sharp": "^2.4.3",
+    "gatsby-remark-prismjs": "^3.3.32",
+    "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-transformer-remark": "^2.6.53",
+    "gatsby-transformer-sharp": "^2.3.13",
+    "prismjs": "^1.19.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "@emotion/eslint-plugin": "^11.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "gatsby-plugin-root-import": "^2.0.5",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
+    "prettier": "^1.19.1",
+    "typescript": "^4.1.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yihwan/gatsby-starter-yihwan"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
