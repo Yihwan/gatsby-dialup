@@ -1,0 +1,38 @@
+import { css } from '@emotion/core';
+import styled from '@emotion/styled';
+
+// @ts-ignore 
+import { MEDIA_QUERIES, SPACER } from 'src/constants';
+
+export const FeaturedActionCards = styled.section`
+  display: grid; 
+  column-gap: ${SPACER.small};
+
+  grid-template-columns: 1fr;
+  ${MEDIA_QUERIES.mdUp} {
+    grid-template-columns: repeat(4, 1fr);
+  }
+`;
+
+const baseActionStyles = css`
+  border: 1px solid #a1a1a1;
+  border-radius: ${SPACER.small};
+  padding: ${SPACER.x2small};
+  box-shadow: 0px 2px 2px silver;
+
+  margin: ${SPACER.small} ${SPACER.base};
+  ${MEDIA_QUERIES.mdUp} {
+    margin: unset; 
+  }
+`;
+
+export const LinkCard = styled.a`
+  ${baseActionStyles}
+  cursor: alias;
+`;
+
+export const ButtonCard = styled.button`
+  ${baseActionStyles}
+  background-color: white;
+  cursor: pointer;
+`;

@@ -10,7 +10,6 @@ const SPACER = {
   x3large: '3rem', // 48px
   x4large: '3.5rem', // 56px
   x5large: '4rem', // 64px
-  desktopGutter: '5.5rem', // 88px;
-}
+} as const;
 
 export default SPACER;

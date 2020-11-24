@@ -5,7 +5,7 @@ const mediaQueries = Object.entries(BREAKPOINTS).reduce(
     ...accumulator,
     [`${label}Up`]: `@media (min-width: ${px}px)`,
   }),
-  {}
-);
+  {},
+); 
 
 export default mediaQueries;

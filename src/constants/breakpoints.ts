@@ -6,6 +6,6 @@ const BREAKPOINTS = {
   xl: 1200,
   xxl: 1440,
   max: 1700,
-}
+} as const;
 
 export default BREAKPOINTS;
