@@ -2,14 +2,10 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
 
+import { FluidImageType } from 'components/types';
+
 import * as Styled from './style';
 import FEATURED_ACTIONS_METADATA from './metadata';
-
-type FeaturedActionImageType = {
-  childImageSharp: { 
-    fluid: FluidObject & { originalName: string };
-  }
-}
 
 type EnrichedFeaturedActionDataType = {
   order: number; 
@@ -45,10 +41,10 @@ const FeaturedActionCards = () => {
   `);
 
   const enrichedFeaturedActionData = featuredActionImages
-    .map((image: FeaturedActionImageType) => ({
-      name: image.childImageSharp.fluid.originalName,
-      fluid: image.childImageSharp.fluid,
-      ...FEATURED_ACTIONS_METADATA[image.childImageSharp.fluid.originalName],
+    .map(({ childImageSharp: { fluid } }: FluidImageType) => ({
+      name: fluid.originalName,
+      fluid: fluid,
+      ...FEATURED_ACTIONS_METADATA[fluid.originalName],
     }))
     .sort((a: EnrichedFeaturedActionDataType, b: EnrichedFeaturedActionDataType) => (
       a.order - b.order

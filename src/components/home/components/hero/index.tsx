@@ -1,11 +1,12 @@
 import React from 'react';
 
+import IconOrbit from './iconOrbit';
 import * as Styled from './style';
 
 const Hero = () => (
   <Styled.Hero>
     <Styled.PrimaryHeading>Gatsby</Styled.PrimaryHeading>
-    <Styled.HeroImage>ph</Styled.HeroImage>
+    <Styled.HeroAsset><IconOrbit /></Styled.HeroAsset>
   </Styled.Hero>
 );
 

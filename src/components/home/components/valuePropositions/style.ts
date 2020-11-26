@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
-// @ts-ignore 
-import { MEDIA_QUERIES, SPACER } from 'src/constants';
+import { MEDIA_QUERIES, SPACER } from 'consts';
 
 export const ValuePropositions = styled.section`
   display: grid; 

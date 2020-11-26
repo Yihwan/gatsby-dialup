@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
-// @ts-ignore
-import { SPACER, MEDIA_QUERIES } from 'src/constants';
+import { SPACER, MEDIA_QUERIES } from 'consts';
 
 export const Hero = styled.div`
   display: grid; 
@@ -16,6 +15,7 @@ export const Hero = styled.div`
 export const PrimaryHeading = styled.h1`
   font-family: "EB Garamond", serif; 
   font-size: 100px; 
+  padding-bottom: ${SPACER.base};
 
   letter-spacing: -0.05em;
   ${MEDIA_QUERIES.mdUp} {
@@ -24,5 +24,7 @@ export const PrimaryHeading = styled.h1`
   }
 `;
 
-export const HeroImage = styled.div`
+export const HeroAsset = styled.div`
+  display: flex;
+  justify-content: center;
 `;

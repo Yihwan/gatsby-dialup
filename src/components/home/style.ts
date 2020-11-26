@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
-// @ts-ignore
-import { BREAKPOINTS } from 'src/constants';
+import { BREAKPOINTS } from 'consts';
 
 export const Home = styled.div`
   width: 100vw;

@@ -1,5 +1,5 @@
 import React from 'react';
-// import SEO from 'src/components/seo';
+// import SEO from 'components/seo';
 // TODO: Add back 
 import './layout.css';
 import 'fontsource-eb-garamond';

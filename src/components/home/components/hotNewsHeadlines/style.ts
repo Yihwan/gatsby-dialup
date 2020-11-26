@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
-// @ts-ignore
-import { SPACER, MEDIA_QUERIES } from 'src/constants';
+import { SPACER, MEDIA_QUERIES } from 'consts';
 
 export const QuoteBarContainer = styled.div`
   background-color: hsla(270, 50%, 40%);

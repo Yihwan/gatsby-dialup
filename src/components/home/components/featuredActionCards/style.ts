@@ -1,8 +1,7 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
-// @ts-ignore 
-import { MEDIA_QUERIES, SPACER } from 'src/constants';
+import { MEDIA_QUERIES, SPACER } from 'consts';
 
 export const FeaturedActionCards = styled.section`
   display: grid; 
