@@ -3,8 +3,9 @@ import React from 'react';
 import Hero from './components/hero';
 import HotNewsHeadlines from './components/hotNewsHeadlines';
 import ValuePropositions from './components/valuePropositions';
-import FeaturedActionCards from './components/featuredActionCards';
+import ActionCards from './components/actionCards';
 import NavMenu from './components/navMenu';
+import Footer from './components/footer';
 
 import * as Styled from './style';
 
@@ -14,8 +15,9 @@ const Home = () => (
       <Hero />
       <HotNewsHeadlines />
       <ValuePropositions />
-      <FeaturedActionCards />
+      <ActionCards />
       <NavMenu />
+      <Footer />
     </Styled.MainContent>
   </Styled.Home>
 );

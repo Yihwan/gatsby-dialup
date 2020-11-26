@@ -2,11 +2,15 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { FixedImageType } from 'components/types';
+import { EnrichedFixedObjectType, FixedImageType } from 'components/types';
 
+import VALUE_PROPOSITIONS_METADATA, { ValuePropositionMetadataType } from './metadata';
 import * as Styled from './style';
 
-const VALUE_PROPOSITIONS = ['build.', 'run.', 'deploy.'];
+type EnrichedValuePropositionType = ValuePropositionMetadataType & { 
+  name: string;
+  fixed: EnrichedFixedObjectType;
+};
 
 const ValuePropositions = () => {
   const { 
@@ -21,7 +25,7 @@ const ValuePropositions = () => {
       }) {
         nodes {
           childImageSharp {
-            fixed(width: 125, height: 125) {
+            fixed(width: 128, height: 128) {
               originalName
               ...GatsbyImageSharpFixed
             }
@@ -31,12 +35,21 @@ const ValuePropositions = () => {
     }
   `);
 
+  const enrichedValuePropositionData = valuePropositionImages.map(({ childImageSharp: { fixed } }: FixedImageType) => ({
+    name: fixed.originalName,
+    fixed, 
+    ...VALUE_PROPOSITIONS_METADATA[fixed.originalName],
+  }))
+    .sort((a: EnrichedValuePropositionType, b: EnrichedValuePropositionType) => (
+      a.order - b.order
+    ));
+
   return(
     <Styled.ValuePropositions>
-      {valuePropositionImages.map(({ childImageSharp: { fixed } }: FixedImageType, idx: number) => (
-        <Styled.Card key={fixed.originalName}>
-          <Img fixed={fixed} />
-          <Styled.Text>{VALUE_PROPOSITIONS[idx]}</Styled.Text>
+      {enrichedValuePropositionData.map((valueProposition: EnrichedValuePropositionType) => (
+        <Styled.Card key={valueProposition.name}>
+          <Img fixed={valueProposition.fixed} alt={valueProposition.alt}/>
+          <Styled.Text>{valueProposition.caption}</Styled.Text>
         </Styled.Card>
       ))}
     </Styled.ValuePropositions>

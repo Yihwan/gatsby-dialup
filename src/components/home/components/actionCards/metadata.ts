@@ -1,30 +1,30 @@
 // TODO: Toggle magic for button (switch image?), maybe enforce stricter button OR link types.
-type FeaturedActionMetadataType = {
+export type ActionMetadataType = {
   order: number; 
   type: 'link' | 'button';
   alt: string;
   href?: string;
 }
 
-const FEATURED_ACTIONS_METADATA: {
-  [key: string]: FeaturedActionMetadataType
+const ACTIONS_METADATA: {
+  [key: string]: ActionMetadataType
 } = {
   'plugins.jpg': {
     order: 1,
     type: 'link',
-    alt: 'Plugins: They can source content, transform data, and more.',
+    alt: 'Incandescent lightbulb clipart with caption Plugins: They can source content, transform data, and more.',
     href: 'https://www.gatsbyjs.com/plugins',
   },
   'themes.jpg': {
     order: 2,
     type: 'link',
-    alt: 'Themes: Wrapped in a single package, installed as a dependency.',
+    alt: 'CD-ROM and floppy disk clipart with caption Themes: Wrapped in a single package, installed as a dependency.',
     href: 'https://www.gatsbyjs.com/plugins?=gatsby-theme',
   },
   'recipes.jpg': {
     order: 3,
     type: 'link',
-    alt: 'Useful default Recipes built in, with many more to choose from.',
+    alt: 'Recipe box clipart with caption Useful default Recipes built in, with many more to choose from.',
     href: 'https://www.gatsbyjs.com/docs/recipes',
   },
   'magic.jpg': {
@@ -34,4 +34,4 @@ const FEATURED_ACTIONS_METADATA: {
   },
 };
 
-export default FEATURED_ACTIONS_METADATA;
+export default ACTIONS_METADATA;

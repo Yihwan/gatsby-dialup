@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 import { MEDIA_QUERIES, SPACER } from 'consts';
 
-export const FeaturedActionCards = styled.section`
+export const ActionCards = styled.section`
   display: grid; 
   column-gap: ${SPACER.small};
 

@@ -29,10 +29,9 @@ export const Card = styled.div`
 
 export const Text = styled.h2`
   font-family: "EB Garamond", serif; 
-  text-transform: capitalize; 
   text-align: center; 
   font-size: 24px; 
   letter-spacing: -0.04em;
 
-  padding: ${SPACER.small} 0;
+  margin-top: ${SPACER.base};
 `;

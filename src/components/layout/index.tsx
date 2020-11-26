@@ -4,6 +4,7 @@ import React from 'react';
 import './layout.css';
 import 'fontsource-eb-garamond';
 
+// @ts-ignore
 const Layout = ({ children }) => (
   <>
     {/* <SEO title="Retro Gatsby" /> */}
