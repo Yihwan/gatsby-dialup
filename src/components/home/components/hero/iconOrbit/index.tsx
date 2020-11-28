@@ -29,7 +29,7 @@ const IconOrbit = () => {
         nodes {
           childImageSharp {
             fixed(width: 32, height: 32) {
-              ...GatsbyImageSharpFixed
+              ...GatsbyImageSharpFixed_withWebp_tracedSVG
               originalName
             }
           }
@@ -40,7 +40,7 @@ const IconOrbit = () => {
         childImageSharp {
           fixed(width: 56, height: 56) {
             originalName
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }

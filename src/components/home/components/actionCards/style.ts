@@ -18,8 +18,9 @@ const baseActionStyles = css`
   border-radius: ${SPACER.small};
   padding: ${SPACER.x2small};
   box-shadow: 0px 2px 2px silver;
+  background-color: white;
 
-  margin: ${SPACER.small} ${SPACER.base};
+  margin: ${SPACER.small} 0;
   ${MEDIA_QUERIES.mdUp} {
     margin: unset; 
   }
@@ -32,6 +33,5 @@ export const LinkCard = styled.a`
 
 export const ButtonCard = styled.button`
   ${baseActionStyles}
-  background-color: white;
   cursor: pointer;
 `;

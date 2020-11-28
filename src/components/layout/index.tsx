@@ -1,14 +1,24 @@
 import React from 'react';
-// import SEO from 'components/seo';
-// TODO: Add back 
-import './layout.css';
 import 'fontsource-eb-garamond';
+
+import Header from 'components/header';
+import Footer from 'components/footer';
+
+import * as Styled from './style';
+import './layout.css';
+
+// import SEO from 'components/seo';
 
 // @ts-ignore
 const Layout = ({ children }) => (
   <>
-    {/* <SEO title="Retro Gatsby" /> */}
-    {children}
+    <Styled.Layout>
+      <main>
+        {children}
+      </main>
+      <Header />
+      <Footer />
+    </Styled.Layout>
   </>
 );
 

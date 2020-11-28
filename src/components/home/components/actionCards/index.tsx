@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
@@ -13,7 +13,13 @@ type EnrichedActionDataType = ActionMetadataType & {
 }
 
 // TODO: Magic -> scroll to top on mobile. 
-const ActionCards = () => {
+const ActionCards = ({ 
+  isMagicActivated,
+  setIsMagicActivated, 
+} : { 
+  isMagicActivated: boolean;
+  setIsMagicActivated: Dispatch<SetStateAction<boolean>>;
+}) => {
   const { 
     allFile: { 
       nodes: actionImages, 
@@ -27,7 +33,7 @@ const ActionCards = () => {
         nodes {
           childImageSharp {
             fluid {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
               originalName
             }
           }
@@ -46,33 +52,37 @@ const ActionCards = () => {
       a.order - b.order
     ));
 
+  const magicActionData = enrichedActionData
+    .find((data: EnrichedActionDataType) => (
+      data.name === (isMagicActivated ? 'magic-on.jpg' : 'magic.jpg')
+    ));
+    
   return(
-    <Styled.ActionCards>
-      {enrichedActionData.map((action: EnrichedActionDataType) => {
-        if (action.type === 'button') {
-          return(
-            <Styled.ButtonCard 
+    <>
+      <Styled.ActionCards>
+        {enrichedActionData
+          .filter((data: EnrichedActionDataType) => data.type === 'link')
+          .slice(0, 4)
+          .map((action: EnrichedActionDataType) => (
+            <Styled.LinkCard 
               key={action.name} 
               tabIndex={action.order}
+              href={action.href}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Img fluid={action.fluid} alt={action.alt} />
-            </Styled.ButtonCard>
-          );
-        }
-
-        return(
-          <Styled.LinkCard 
-            key={action.name} 
-            tabIndex={action.order}
-            href={action.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Img fluid={action.fluid} alt={action.alt} />
-          </Styled.LinkCard>
-        );
-      })}
-    </Styled.ActionCards>
+            </Styled.LinkCard>
+          ))}
+        <Styled.ButtonCard 
+          key="magic"
+          tabIndex={4}
+          onClick={() => setIsMagicActivated(prevState => !prevState)}
+        >
+          <Img fluid={magicActionData.fluid} alt={magicActionData.alt} />
+        </Styled.ButtonCard>
+      </Styled.ActionCards>
+    </>
   );
 };
 

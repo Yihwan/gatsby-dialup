@@ -14,12 +14,12 @@ export const Hero = styled.div`
 
 export const PrimaryHeading = styled.h1`
   font-family: "EB Garamond", serif; 
-  font-size: 100px; 
+  font-size: 6rem; 
   padding-bottom: ${SPACER.base};
 
   letter-spacing: -0.05em;
   ${MEDIA_QUERIES.mdUp} {
-    font-size: 150px;
+    font-size: 8.5rem;
     letter-spacing: -0.07em;
   }
 `;

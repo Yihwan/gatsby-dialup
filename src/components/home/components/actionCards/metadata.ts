@@ -32,6 +32,11 @@ const ACTIONS_METADATA: {
     type: 'button',
     alt: 'Magic? Sound on, expect motion.',
   },
+  'magic-on.jpg': {
+    order: 5,
+    type: 'button',
+    alt: 'It\'s on. Click again to turn off.',
+  },
 };
 
 export default ACTIONS_METADATA;

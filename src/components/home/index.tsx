@@ -1,25 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
+import MagicBackground from './components/magicBackground';
 import Hero from './components/hero';
 import HotNewsHeadlines from './components/hotNewsHeadlines';
-import ValuePropositions from './components/valuePropositions';
+import Gallery from './components/gallery';
 import ActionCards from './components/actionCards';
-import NavMenu from './components/navMenu';
-import Footer from './components/footer';
 
-import * as Styled from './style';
+const INITIAL_MAGIC_DELAY_IN_SECONDS = 3;
 
-const Home = () => (
-  <Styled.Home>
-    <Styled.MainContent>
+const Home = () => {
+  const [isMagicActivated, setIsMagicActivated] = useState(false);
+  const [isMagicConnected, setIsMagicConnected] = useState(false);
+
+  useEffect(() => {
+    const connectMagic = setTimeout(() => {
+      setIsMagicConnected(true);
+    }, INITIAL_MAGIC_DELAY_IN_SECONDS * 1000);
+
+    if (!isMagicActivated) {
+      setIsMagicConnected(false);
+      clearTimeout(connectMagic);
+    }
+
+    return () => clearTimeout(connectMagic);
+  }, [isMagicActivated]);
+
+  return(
+    <>
+      {isMagicActivated && isMagicConnected && <MagicBackground />}
       <Hero />
       <HotNewsHeadlines />
-      <ValuePropositions />
-      <ActionCards />
-      <NavMenu />
-      <Footer />
-    </Styled.MainContent>
-  </Styled.Home>
-);
+      <Gallery 
+        isMagicActivated={isMagicActivated}
+        isMagicConnected={isMagicConnected}
+      />
+      <ActionCards 
+        isMagicActivated={isMagicActivated}
+        setIsMagicActivated={setIsMagicActivated} 
+      />
+    </>
+  );
+};
 
 export default Home;
