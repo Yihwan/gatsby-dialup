@@ -1,6 +1,6 @@
 export type DialupStepType = {
   order: number; 
-  delayInSeconds: number;
+  renderAtSecondsSinceActivation: number;
   alt: string; 
 }
 
@@ -9,18 +9,18 @@ const DIALUP_SEQUENCE_METADATA: {
 } = {
   'dialup_1.png': {
     order: 1, 
-    delayInSeconds: 3,
-    alt: '1',
+    renderAtSecondsSinceActivation: 0,
+    alt: 'Stationary AOL human icon: Dialup connection initiated.',
   },
   'dialup_2.png': {
     order: 2, 
-    delayInSeconds: 3,
-    alt: '1',
+    renderAtSecondsSinceActivation: 24,
+    alt: 'Running AOL human icon: Dialup connection in progress.',
   },
   'dialup_3.png': {
     order: 3, 
-    delayInSeconds: 3,
-    alt: '1',
+    renderAtSecondsSinceActivation: 27,
+    alt: 'AOL icon with multiple humans: Dialup connection successful.',
   },
 };
 

@@ -4,6 +4,11 @@ import styled from '@emotion/styled';
 import { MEDIA_QUERIES, SPACER } from 'consts';
 
 type OrbitType = 'outer' | 'inner';
+type AxialRotationPropsType = {
+  orbit: OrbitType; 
+  idx: number;
+  isMagicConnected: boolean;
+}
 
 const REVOLUTION_TIME_IN_SECONDS = 180;
 const ORBIT_CONFIG = {
@@ -23,20 +28,32 @@ const ORBIT_CONFIG = {
   },
 };
 
-const rotateAxial = ({ orbit, idx }: { orbit: OrbitType; idx: number }) => (
+const rotateAxial = ({ orbit, idx, isMagicConnected }: AxialRotationPropsType) => (
   keyframes`
-    100% {
-      transform: rotate(${-ORBIT_CONFIG[orbit].iconOffset(idx) - 360}deg);
+    to {
+      transform: rotate(${-ORBIT_CONFIG[orbit].iconOffset(idx) - (isMagicConnected ? 45 : 360)}deg);
     }
   `
 );
 
-export const AxialRotation = styled.div`
-  ${({ orbit, idx }: { orbit: OrbitType; idx: number }) => (
+const revolveAxialRotation = (props: AxialRotationPropsType) => (
+  css`
+    ${rotateAxial(props)} ${REVOLUTION_TIME_IN_SECONDS}s infinite linear;
+  `
+);
+
+const stepAxialRotation = (props: AxialRotationPropsType) => (
+  css`
+    ${rotateAxial(props)} 1s steps(2, end) infinite;
+  `
+);
+
+export const AxialRotation = styled.div<AxialRotationPropsType>`
+  ${({ orbit, idx }: { orbit: OrbitType; idx: number; }) => (
     `transform: rotate(${-ORBIT_CONFIG[orbit].iconOffset(idx)}deg);`
   )}
 
-  animation: ${props => css`${rotateAxial(props)} ${REVOLUTION_TIME_IN_SECONDS}s infinite linear;`}
+  animation: ${props => props.isMagicConnected ? stepAxialRotation(props) : revolveAxialRotation(props)}
 `;
 
 export const Icon = styled.div`
@@ -69,7 +86,7 @@ const baseOrbitStyles = (orbit: OrbitType) => (css`
   }
 `);
 
-export const OuterOrbit = styled.div`
+export const OuterOrbit = styled.div<{ isMagicConnected: boolean }>`
   ${baseOrbitStyles('outer')}
 
   position: relative;
@@ -79,11 +96,22 @@ export const OuterOrbit = styled.div`
   }
   
   animation: revolve ${REVOLUTION_TIME_IN_SECONDS}s infinite linear;
+
   @keyframes revolve {
-    100% {
+    to {
       transform: rotate(360deg);
     }
   }
+
+  ${({ isMagicConnected }) => isMagicConnected && (`
+    animation: rotateStep 1s steps(2, end) infinite;
+
+    @keyframes rotateStep { 
+      to {  
+        transform: rotate(45deg);
+      }
+    }
+  `)}
 `;
 
 const absoluteCenterStyles = css`

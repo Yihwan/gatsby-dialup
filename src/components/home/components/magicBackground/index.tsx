@@ -11,7 +11,7 @@ const MagicBackground = () => {
     <Styled.MagicBackground 
       role="img"
       aria-label={'TODO'}
-      background={gifConfig.src}
+      backgroundSrc={gifConfig.src}
     />
   );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
@@ -13,6 +13,16 @@ type EnrichedDialupStepType = DialupStepType & {
 };
 
 const DialupSteps = () => {
+  const [secondsSinceActivation, setSecondsSinceActivation] = useState(0);
+
+  useEffect(() => {
+    let interval = setInterval(() => {
+      setSecondsSinceActivation(prevState => prevState + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [secondsSinceActivation]);
+
   const { 
     dialupSteps: { 
       nodes: dialupImages, 
@@ -46,11 +56,14 @@ const DialupSteps = () => {
 
   return(
     <Styled.Gallery>
-      {enrichedDialupStepData.map((dialupStep: EnrichedDialupStepType) => (
-        <Styled.Card key={dialupStep.name}>
-          <Img fixed={dialupStep.fixed}/>
-        </Styled.Card>
-      ))}
+      {enrichedDialupStepData
+        .map((dialupStep: EnrichedDialupStepType) => (
+          <Styled.Card key={dialupStep.name}>
+            {dialupStep.renderAtSecondsSinceActivation <= secondsSinceActivation 
+              && <Img fixed={dialupStep.fixed}/>}
+          </Styled.Card>
+        ))
+      }
     </Styled.Gallery>
   );
 };

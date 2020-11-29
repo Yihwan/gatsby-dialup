@@ -10,7 +10,7 @@ const extractAltTextFromFilename = (filename: string) => (
   filename.split('.')[0].split('-').join(' ')
 );
 
-const IconOrbit = () => {
+const IconOrbit = ({ isMagicConnected }: { isMagicConnected: boolean }) => {
   const { 
     iconNodes: { 
       nodes: iconImages, 
@@ -48,7 +48,7 @@ const IconOrbit = () => {
   `);
 
   return(
-    <Styled.OuterOrbit>
+    <Styled.OuterOrbit isMagicConnected={isMagicConnected}>
       {iconImages.slice(0, 8).map(({ childImageSharp: { fixed } }: FixedImageType, idx: number) => (
         <Styled.Icon 
           key={fixed.originalName} 
@@ -58,6 +58,7 @@ const IconOrbit = () => {
           <Styled.AxialRotation 
             orbit="outer"
             idx={idx}
+            isMagicConnected={isMagicConnected}
           >
             <Img 
               key={fixed.originalName}
@@ -78,6 +79,7 @@ const IconOrbit = () => {
             <Styled.AxialRotation 
               orbit="inner"
               idx={idx}
+              isMagicConnected={isMagicConnected}
             >
               <Img 
                 key={fixed.originalName}
@@ -89,7 +91,11 @@ const IconOrbit = () => {
         ))}
 
         <Styled.Center>
-          <Styled.AxialRotation orbit="outer" idx={0}>
+          <Styled.AxialRotation 
+            orbit="outer" 
+            idx={0}
+            isMagicConnected={isMagicConnected}
+          >
             <Img 
               fixed={fixedGatsbyWordmark}
               alt={extractAltTextFromFilename(fixedGatsbyWordmark.originalName)}
