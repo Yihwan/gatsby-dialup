@@ -28,7 +28,6 @@ const baseActionStyles = css`
 
 export const LinkCard = styled.a`
   ${baseActionStyles}
-  cursor: alias;
 `;
 
 export const ButtonCard = styled.button`

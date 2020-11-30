@@ -38,7 +38,7 @@ const Home = () => {
 
   return(
     <>
-      {isMagicActivated && isMagicConnected && <MagicBackground />}
+      {isMagicConnected && <MagicBackground />}
       <Hero 
         isMagicConnected={isMagicConnected}
       />

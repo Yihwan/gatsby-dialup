@@ -68,7 +68,6 @@ export const LinkItem = styled.li`
 export const Link = styled.a`
   color: white;
   text-decoration: none;
-  cursor: alias;
 `;
 
 export const Bookend = styled.div`

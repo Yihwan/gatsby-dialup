@@ -10,7 +10,7 @@ const Footer = () => (
         <li><Link to="/">Dial-up Home</Link></li>
         <li><Link to="/what-is-this">What Is This?</Link></li>
         <li>
-          <a 
+          <a
             href="https://yihwan.kim"
             target="_blank"
             rel="noopener noreferrer"
@@ -27,7 +27,7 @@ const Footer = () => (
             Source Code
           </a>
         </li>
-        {/* <li><Link to="/credits">Credits</Link></li> */}
+        <li><Link to="/credits">Credits</Link></li>
       </ul>
     </nav>
   </Styled.Footer>
