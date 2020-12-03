@@ -3,15 +3,16 @@ import 'fontsource-eb-garamond';
 
 import Header from 'components/header';
 import Footer from 'components/footer';
+// @ts-ignore
+import SEO from 'components/seo.js';
 
 import * as Styled from './style';
 import './layout.css';
 
-// import SEO from 'components/seo';
-
 // @ts-ignore
-const Layout = ({ children }) => (
+const Layout = ({ seo, children }) => (
   <>
+    <SEO {...seo}/>
     <Styled.Layout>
       <main>
         {children}

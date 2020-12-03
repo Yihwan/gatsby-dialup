@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Y5.studio`,
-    description: `by Yihwan Kim`,
+    title: `Gatsby Dial-up`,
+    description: `Explore the World Wide Web through Gatsby Dial-up, with performance, scalability, and security built-in. Call the number on your screen to learn more today.`,
     author: `@yihwan`,
   },
   plugins: [
@@ -18,18 +18,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `gatsby-dialup`,
+        short_name: `dialup`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, 
       },
     },
     `gatsby-plugin-emotion`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }

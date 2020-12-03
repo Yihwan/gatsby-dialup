@@ -5,13 +5,13 @@ import useMagic from 'utils/magic/useMagic';
 import * as Styled from './style';
 
 const MagicForeground = () => {
-  const gifConfig = useMagic({ placement: 'foreground' });
+  const { src, alt } = useMagic({ placement: 'foreground' });
 
   return(
     <Styled.MagicForeground 
       role="img"
-      aria-label={'TODO'}
-      backgroundSrc={gifConfig.src} 
+      aria-label={alt}
+      backgroundSrc={src} 
     />
   );
 };

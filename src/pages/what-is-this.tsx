@@ -4,7 +4,11 @@ import Layout from 'components/layout';
 import { Typography } from 'consts';
 
 const AboutPage = () => (
-  <Layout>
+  <Layout
+    seo={{
+      title: 'What is this?',
+    }}
+  >
     <Typography.Heading>What is this?</Typography.Heading>
 
     <Typography.Paragraph>

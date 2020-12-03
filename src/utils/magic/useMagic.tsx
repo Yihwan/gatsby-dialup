@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react';
 
 import { BACKGROUND_GIFS, FOREGROUND_GIFS } from './gifs';
 
+export const extractFilename = (src: string) => (
+  src
+);
+
 const getRandom = (array: Array<any>) => (
   array[Math.floor(Math.random() * array.length)]
 );

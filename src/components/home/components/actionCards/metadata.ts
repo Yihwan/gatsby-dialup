@@ -1,4 +1,3 @@
-// TODO: Toggle magic for button (switch image?), maybe enforce stricter button OR link types.
 export type ActionMetadataType = {
   order: number; 
   type: 'link' | 'button';

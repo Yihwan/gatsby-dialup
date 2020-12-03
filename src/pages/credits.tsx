@@ -4,7 +4,11 @@ import Layout from 'components/layout';
 import { Typography } from 'consts';
 
 const CreditsPage = () => (
-  <Layout>
+  <Layout
+    seo={{
+      title: 'Credits',
+    }}
+  >
     <Typography.Heading>Credits</Typography.Heading>
 
     <Typography.Title>Site Design</Typography.Title>
