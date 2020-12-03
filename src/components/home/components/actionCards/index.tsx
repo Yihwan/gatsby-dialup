@@ -66,7 +66,6 @@ const ActionCards = ({
           .map((action: EnrichedActionDataType) => (
             <Styled.LinkCard 
               key={action.name} 
-              tabIndex={action.order - 1}
               href={action.href}
               target="_blank"
               rel="noopener noreferrer"
@@ -76,7 +75,6 @@ const ActionCards = ({
           ))}
         <Styled.ButtonCard 
           key="magic"
-          tabIndex={3}
           onClick={() => setIsMagicActivated(prevState => !prevState)}
         >
           <Img fluid={magicActionData.fluid} alt={magicActionData.alt} />
