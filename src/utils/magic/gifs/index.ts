@@ -2,15 +2,10 @@ const GIF_CONFIG = [
   {
     src: require('./assets/40oz.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
-  },
-  {
-    src: require('./assets/aim-rain.gif'), 
-    canBeForeground: false, 
     canBeBackground: true, 
   },
   {
-    src: require('./assets/blinds.gif'), 
+    src: require('./assets/aim-rain.gif'), 
     canBeForeground: false, 
     canBeBackground: true, 
   },
@@ -25,6 +20,11 @@ const GIF_CONFIG = [
     canBeBackground: true, 
   },
   {
+    src: require('./assets/boxes-color.gif'), 
+    canBeForeground: false, 
+    canBeBackground: true, 
+  },
+  {
     src: require('./assets/bunnies.gif'), 
     canBeForeground: false, 
     canBeBackground: true, 
@@ -32,22 +32,17 @@ const GIF_CONFIG = [
   {
     src: require('./assets/burger.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
-  },
-  {
-    src: require('./assets/butter.gif'), 
-    canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/cd.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/chip.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/croak.gif'), 
@@ -67,27 +62,27 @@ const GIF_CONFIG = [
   {
     src: require('./assets/cyberpunk.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/dancing.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/ditto.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/doge.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/donut.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/dorito.gif'), 
@@ -102,7 +97,7 @@ const GIF_CONFIG = [
   {
     src: require('./assets/finish.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/flash-drive.gif'), 
@@ -112,12 +107,12 @@ const GIF_CONFIG = [
   {
     src: require('./assets/flip-phone.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/floating-cd.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/floppy-disk.gif'), 
@@ -127,7 +122,7 @@ const GIF_CONFIG = [
   {
     src: require('./assets/flying-money.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/ipod-classic.gif'), 
@@ -137,12 +132,12 @@ const GIF_CONFIG = [
   {
     src: require('./assets/key.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/lacroix.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/links.gif'), 
@@ -172,7 +167,7 @@ const GIF_CONFIG = [
   {
     src: require('./assets/pawns.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/netscape.gif'), 
@@ -187,7 +182,7 @@ const GIF_CONFIG = [
   {
     src: require('./assets/pepsi.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/points.gif'), 
@@ -197,17 +192,17 @@ const GIF_CONFIG = [
   {
     src: require('./assets/rose.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/running-cat.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/sad.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/shiba.gif'), 
@@ -217,22 +212,22 @@ const GIF_CONFIG = [
   {
     src: require('./assets/sink.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/stab.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/unicorn.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/vhs.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/wave.gif'), 
@@ -242,17 +237,17 @@ const GIF_CONFIG = [
   {
     src: require('./assets/wavy-cup.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/what.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/wifi.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/windows-flag.gif'), 
@@ -262,7 +257,7 @@ const GIF_CONFIG = [
   {
     src: require('./assets/windows-paint.gif'), 
     canBeForeground: true, 
-    canBeBackground: false, 
+    canBeBackground: true, 
   },
   {
     src: require('./assets/windows-xp.gif'), 

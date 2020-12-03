@@ -16,14 +16,14 @@ const CreditsPage = () => (
         rel="noopener noreferrer"
       >
         1998
-      </a> and when the iPod (remember those?) had a{' '}
+      </a> and back when the iPod (remember those?) had a{' '}
       <a 
         href="http://web.archive.org/web/20011023204537/http://www.apple.com:80/"
         target="_blank"
         rel="noopener noreferrer"
       >
         moving mechanical wheel
-      </a>. Then I realized that the three-pane gallery would accommodate AOL's{' '}
+      </a>. I realized that the three-pane gallery would accommodate AOL's{' '}
       <a 
         href="https://www.youtube.com/watch?v=D1UY7eDRXrs"
         target="_blank"
@@ -71,7 +71,7 @@ const CreditsPage = () => (
       one that felt more unexpected and delightfully weird.
     </Typography.Paragraph>
 
-    <Typography.Title>The Gatsby Galaxy</Typography.Title>
+    <Typography.Title>Gatsby Galaxy</Typography.Title>
     <Typography.Paragraph>
       The icon orbit on the home page is a (bad) CSS-in-JS implementation of{' '} 
       <a 

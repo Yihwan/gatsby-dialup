@@ -22,6 +22,10 @@ const Title = styled.h2`
 const Paragraph = styled.p`
   margin-top: 1.2rem;
   line-height: 1.25;
+
+  &:last-of-type {
+    margin-bottom: ${SPACER.large};
+  }
 `;
 
 export default {
