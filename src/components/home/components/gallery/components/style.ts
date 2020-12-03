@@ -16,11 +16,11 @@ export const Gallery = styled.section`
 export const Card = styled.div`
   width: 100%;
   min-height: 13.5rem;
-  padding: ${SPACER.base};
   display: flex; 
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
 
   ${MEDIA_QUERIES.mdUp} {
     &:not(:last-of-type) {

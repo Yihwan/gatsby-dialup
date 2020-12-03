@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import useSound from 'use-sound';
 
 import MagicBackground from './components/magicBackground';
 import Hero from './components/hero';
@@ -15,24 +14,28 @@ const TIME_TO_CONNECT_MAGIC_IN_SECONDS = 29.5;
 const Home = () => {
   const [isMagicActivated, setIsMagicActivated] = useState(false);
   const [isMagicConnected, setIsMagicConnected] = useState(false);
-  const [play, { stop }] = useSound(dialupWindowdipper);
-
+  
+  // TODO: Better way to only handle audio on activate? Don't need to keep ref.
   useEffect(() => {
-    play();
+    const magicalAudio = new Audio(dialupWindowdipper);
 
     const connectMagic = setTimeout(() => {
-      setIsMagicConnected(true);
+      if (isMagicActivated) {
+        setIsMagicConnected(true);
+      }
     }, TIME_TO_CONNECT_MAGIC_IN_SECONDS * 1000);
-
-    if (!isMagicActivated) {
-      stop();
+    
+    if (isMagicActivated) {
+      magicalAudio.play();
+    } else {
+      magicalAudio.pause();
       setIsMagicConnected(false);
       clearTimeout(connectMagic);
     }
 
     return () => {
       clearTimeout(connectMagic);
-      stop();
+      magicalAudio.pause();
     };
   }, [isMagicActivated]);
 

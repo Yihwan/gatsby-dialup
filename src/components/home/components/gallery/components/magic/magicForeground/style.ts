@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 export const MagicForeground = styled.div<{ backgroundSrc: string; }>`
   width: 100%;
   height: 100%;
+  position: absolute;
 
   ${({ backgroundSrc }) => `background-image: url(${backgroundSrc});`}
   background-size: contain;

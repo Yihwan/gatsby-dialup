@@ -21,8 +21,7 @@
     "prismjs": "^1.19.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-helmet": "^5.2.1",
-    "use-sound": "^2.0.1"
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
     "@emotion/eslint-plugin": "^11.0.0",

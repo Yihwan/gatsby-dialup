@@ -4,7 +4,7 @@ export const MagicBackground = styled.div<{ backgroundSrc: string }>`
   position: absolute;
   left: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   z-index: -3;
 
   ${({ backgroundSrc }) => `background-image: url(${backgroundSrc});`}
