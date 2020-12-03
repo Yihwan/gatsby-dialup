@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { SPACER, BREAKPOINTS, MEDIA_QUERIES } from 'consts';
+import { SPACER, MEDIA_QUERIES } from 'consts';
 
 const Heading = styled.h1`
   font-family: "EB Garamond",serif;

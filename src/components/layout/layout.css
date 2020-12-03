@@ -5,8 +5,16 @@
 
 @font-face {
   font-family: "Chicago";
-  src: url("../../../static/fonts/ChicagoFLF.woff") format("woff");
+	src: url("../../../static/fonts/ChicagoFLF.woff") format("woff");
+	font-display: block;
 } 
+
+@font-face {
+  font-family: "EB Garamond";
+	src: url("../../../static/fonts/EB-Garamond.woff2") format("woff2");
+	font-display: block;
+} 
+
 * { 
 	box-sizing: border-box;
 }

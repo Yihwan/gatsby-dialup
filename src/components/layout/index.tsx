@@ -1,5 +1,4 @@
 import React from 'react';
-import 'fontsource-eb-garamond';
 
 import Header from 'components/header';
 import Footer from 'components/footer';
