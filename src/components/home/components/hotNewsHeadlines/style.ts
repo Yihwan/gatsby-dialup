@@ -9,6 +9,7 @@ export const QuoteBarContainer = styled.div`
   font-family: Chicago, system-ui;
 
   grid-template-columns: 1fr;
+
   ${MEDIA_QUERIES.mdUp} {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -34,7 +35,13 @@ export const QuoteContainer = styled.div`
   background-color: hsla(270, 50%, 80%);
   border: 2px inset hsla(270, 50%, 96%);
   text-overflow: ellipsis;
+  min-height: 28px;
+  height: ${SPACER.x3large};
 
+  ${MEDIA_QUERIES.smUp} {
+    height: unset;
+  }
+  
   ${MEDIA_QUERIES.mdUp} {
     grid-column: 2 / 4;
   }
