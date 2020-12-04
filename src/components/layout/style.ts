@@ -4,6 +4,7 @@ import { BREAKPOINTS, SPACER } from 'consts';
 
 export const Layout = styled.div`
   width: 100vw; 
+  min-height: 100vh;
   padding: 0 ${SPACER.base} ${SPACER.base};
   position: relative;
 
