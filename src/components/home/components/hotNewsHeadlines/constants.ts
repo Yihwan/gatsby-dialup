@@ -11,7 +11,7 @@ const HEADLINES = [
   'Experts Say Gravy Tastes Better When Loudly Slurped',
   'Bring Back Marquee Tag, Disgruntled Nerds Demand', 
   'Traveling Technician Talks Transmissions Tuesday',
-  'A Rising Sea Lifts All Boats\', Claims Oil Lobbyist',
+  '\'A Rising Sea Lifts All Boats\', Claims Oil Lobbyist',
   'Heard on the Street: Kitty Kibble Shortage Imminent',
   'Kitty Kibble Futures Spike; Consumers Stockpile',
   'Local Merchants Puzzled By Rumors: \'We Have Plenty\'',
