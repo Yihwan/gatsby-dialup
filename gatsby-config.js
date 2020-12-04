@@ -3,6 +3,7 @@ module.exports = {
     title: `Gatsby Dial-up`,
     description: `Explore the World Wide Web through Gatsby Dial-up, with performance, scalability, and security built-in. Call the number on your screen to learn more today.`,
     author: `@yihwan`,
+    siteUrl: 'https://gatsbydialup.com',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
