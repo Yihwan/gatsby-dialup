@@ -1,5 +1,5 @@
 const HEADLINES = [
-  'Gatsby Silly Site Challenge announced!',
+  'Gatsby Silly Site Challenge Announced!',
   'Headlines brought to you by SimCity and MSNBSea.',
   'Lab Rat Union Files Class Action Against Scientists',
   'Doughnuts: Is There Anything They Can\'t Do?',

@@ -69,21 +69,25 @@ const AboutPage = () => (
     </Typography.Paragraph>
 
     <Typography.Paragraph>
-      Feel free to check out the{' '}
+      The source code for this site is available on{' '}
       <a 
         href="https://github.com/Yihwan/gatsby-dialup"
         target="_blank"
         rel="noopener noreferrer"
       >
-        source code
-      </a> for this site or{' '}
+        GitHub
+      </a>. Feel free to contribute a funny headline or just{' '}
       <a 
-        href="https://yihwan.kim/"
+        href="https://yihwan.kim/contact"
         target="_blank"
         rel="noopener noreferrer"
       >
         say hello
-      </a>. I'm looking forward to whatever comes next!
+      </a>.
+    </Typography.Paragraph>
+
+    <Typography.Paragraph>
+      I'm looking forward to whatever comes next!
     </Typography.Paragraph>
   </Layout>
 );
