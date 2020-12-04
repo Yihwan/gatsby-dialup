@@ -33,6 +33,7 @@ export const CaptionContainer = styled.div`
 export const QuoteContainer = styled.div`
   background-color: hsla(270, 50%, 80%);
   border: 2px inset hsla(270, 50%, 96%);
+  text-overflow: ellipsis;
 
   ${MEDIA_QUERIES.mdUp} {
     grid-column: 2 / 4;

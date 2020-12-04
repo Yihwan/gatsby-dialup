@@ -94,6 +94,11 @@ const CreditsPage = () => (
         Macintosh Repository
       </a>.
     </Typography.Paragraph>
+
+    <Typography.Title>Hot News Headlines</Typography.Title>
+    <Typography.Paragraph>
+      Brought to you by SimCity and MSNBSea.
+    </Typography.Paragraph>
   </Layout>
 );
 
